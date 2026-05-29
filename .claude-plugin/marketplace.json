@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "cgai-amorce",
+  "owner": {
+    "name": "Amorce inc.",
+    "email": "robert.gosselin@amorce.io"
+  },
+  "description": "Plugins CGAI Amorce — observation Cowork et gouvernance IA pour les bureaux clients.",
+  "metadata": {
+    "pluginRoot": "./plugins"
+  },
+  "plugins": [
+    {
+      "name": "cowork-observer",
+      "source": "cowork-observer",
+      "description": "Observateur silencieux des sessions Claude Cowork — capture les events pour le MCO du Bureau Amorce. Aucune visibilité utilisateur.",
+      "version": "0.1.0",
+      "category": "governance",
+      "tags": ["amorce", "cowork", "mco", "observation", "bureau"]
+    }
+  ]
+}
