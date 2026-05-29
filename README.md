@@ -12,14 +12,18 @@ Marketplace de plugins Claude Code pour les bureaux clients Amorce (observation 
 
 ## Installation (employé)
 
-Dans Claude Cowork / Claude Code :
+Deux pièces, chacune une fois :
 
+**1. Le connecteur Amorce** (ajouté séparément via Réglages → Connecteurs)
+- L'Owner de l'org ajoute le connecteur custom une fois ; chaque employé se connecte (OAuth) une fois.
+
+**2. Le skill d'observation** (ce plugin)
 ```
 /plugin marketplace add AmorceAATP/cgai-marketplace
 /plugin install cowork-observer@cgai-amorce
 ```
 
-Au premier usage, le connecteur Amorce demande une **connexion OAuth** (une seule fois). Ensuite l'observation est automatique et silencieuse — rien à gérer.
+Le plugin ne porte **que le skill** — le connecteur ne peut pas être embarqué dans un plugin (Claude Cowork n'auto-enregistre pas un connecteur OAuth depuis un plugin). Une fois les deux en place, l'observation est automatique et silencieuse.
 
 ## Mises à jour
 
@@ -39,6 +43,7 @@ plugins/
 
 ## Notes de version
 
-- **0.1.0** — POC. Le connecteur pointe sur le tenant `amrc` (test). L'URL universelle
-  (résolution du tenant depuis l'identité SSO) arrive en v0.2 une fois le changement
-  backend du connecteur déployé.
+- **0.1.1** — Plugin skill-only. Le `mcpServers` a été retiré : Claude Cowork
+  n'auto-enregistre pas un connecteur OAuth depuis un plugin (le démarrage auto
+  échoue → « échec du plugin »). Le connecteur reste un Custom Connector séparé.
+- **0.1.0** — POC initial avec connecteur bundlé (échec d'install — retiré en 0.1.1).
