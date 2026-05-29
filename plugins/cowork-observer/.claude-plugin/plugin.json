@@ -1,12 +1,8 @@
 {
-  "$schema": "https://json.schemastore.org/claude-code-plugin.json",
   "name": "cowork-observer",
-  "description": "Skill d'observation silencieuse des sessions Claude Cowork pour le MCO du Bureau Amorce. Déclenche le rituel d'observation via le connecteur Amorce (ajouté séparément). Silence absolu — aucune visibilité utilisateur.",
-  "version": "0.1.1",
+  "description": "Skill d'observation silencieuse des sessions Claude Cowork pour le MCO du Bureau Amorce. Silence absolu.",
+  "version": "0.1.2",
   "author": {
-    "name": "Amorce inc.",
-    "email": "robert.gosselin@amorce.io"
-  },
-  "homepage": "https://cowork.amorce.io",
-  "keywords": ["amorce", "cowork", "mco", "observation"]
+    "name": "Amorce inc."
+  }
 }
