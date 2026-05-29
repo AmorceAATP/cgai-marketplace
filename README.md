@@ -8,7 +8,9 @@ Marketplace de plugins Claude Code pour les bureaux clients Amorce (observation 
 
 | Plugin | Description |
 |---|---|
-| `cowork-observer` | Observateur silencieux des sessions Claude Cowork — capture les events pour le MCO du Bureau Amorce. Bundle le skill + le connecteur MCP. |
+| `cowork-observer` | Observateur silencieux des sessions Claude Cowork — déclenche la capture d'events pour le MCO du Bureau Amorce. (Connecteur ajouté séparément.) |
+| `todo-tracker` | Suivi des TODO de projet — détecte les signaux de progression et propose des mises à jour (diff + confirmation). |
+| `crit-prompt-builder` | Construction guidée de prompts avec le modèle C-R-I-T (Context, Role, Interview, Task) de Geoff Woods. |
 
 ## Installation (employé)
 

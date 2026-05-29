@@ -1,0 +1,8 @@
+{
+  "name": "crit-prompt-builder",
+  "description": "Guide interactif pour construire un prompt structuré avec le modèle C-R-I-T (Context, Role, Interview, Task) de Geoff Woods. Déclenché quand l'utilisateur veut bâtir/structurer un prompt.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Amorce inc."
+  }
+}

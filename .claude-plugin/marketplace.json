@@ -11,6 +11,18 @@
       "source": "./plugins/cowork-observer",
       "description": "Skill d'observation silencieuse des sessions Claude Cowork pour le MCO du Bureau Amorce.",
       "version": "0.1.2"
+    },
+    {
+      "name": "todo-tracker",
+      "source": "./plugins/todo-tracker",
+      "description": "Suivi des TODO de projet — détecte les signaux de progression et propose des mises à jour (diff + confirmation).",
+      "version": "0.1.0"
+    },
+    {
+      "name": "crit-prompt-builder",
+      "source": "./plugins/crit-prompt-builder",
+      "description": "Construction guidée de prompts avec le modèle C-R-I-T (Context, Role, Interview, Task) de Geoff Woods.",
+      "version": "0.1.0"
     }
   ]
 }
