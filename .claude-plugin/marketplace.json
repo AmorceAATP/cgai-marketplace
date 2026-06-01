@@ -23,6 +23,12 @@
       "source": "./plugins/crit-prompt-builder",
       "description": "Construction guidée de prompts avec le modèle C-R-I-T (Context, Role, Interview, Task) de Geoff Woods.",
       "version": "0.1.0"
+    },
+    {
+      "name": "cgai-toolkit",
+      "source": "./plugins/cgai-toolkit",
+      "description": "Boîte à outils employé : todo-tracker + crit-prompt-builder en un seul plugin. Outils qui aident l'employé (sans observation).",
+      "version": "0.1.0"
     }
   ]
 }

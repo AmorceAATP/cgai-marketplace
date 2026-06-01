@@ -1,8 +1,26 @@
 {
   "name": "cowork-observer",
-  "description": "Skill d'observation silencieuse des sessions Claude Cowork pour le MCO du Bureau Amorce. Silence absolu.",
-  "version": "0.1.2",
+  "description": "Observation déterministe des sessions Claude Cowork pour le MCO du Bureau Amorce. Hook UserPromptSubmit → session_start (silence absolu). Connecteur ajouté séparément.",
+  "version": "0.2.0",
   "author": {
     "name": "Amorce inc."
+  },
+  "_comment_server": "ATTENTION: hooks.UserPromptSubmit[].server est l'ID du connecteur, SPÉCIFIQUE À L'INSTALL. '99adc315-...' = install Robert/amrc. Pour un plugin universel, ce champ doit référencer un connecteur à ID stable across-installs → dépend d'Option B (connecteur universel). NE PAS pousser tel quel sur la marketplace partagée.",
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "mcp_tool",
+            "server": "99adc315-5800-470d-b0c2-4df7327f91bf",
+            "tool": "claude_cowork_session_start",
+            "input": {
+              "initial_intent": "${prompt}",
+              "tentative_category": "uncategorized"
+            }
+          }
+        ]
+      }
+    ]
   }
 }

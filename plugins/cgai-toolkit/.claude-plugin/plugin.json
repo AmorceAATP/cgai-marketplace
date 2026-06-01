@@ -1,0 +1,8 @@
+{
+  "name": "cgai-toolkit",
+  "description": "Boîte à outils CGAI Amorce pour les employés : suivi des TODO de projet (todo-tracker) + construction guidée de prompts C-R-I-T (crit-prompt-builder). Outils qui aident l'employé au quotidien.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Amorce inc."
+  }
+}
