@@ -25,9 +25,9 @@
       "version": "0.1.0"
     },
     {
-      "name": "cgai-toolkit",
-      "source": "./plugins/cgai-toolkit",
-      "description": "Boîte à outils employé : todo-tracker + crit-prompt-builder en un seul plugin. Outils qui aident l'employé (sans observation).",
+      "name": "amorce-crawl-agents",
+      "source": "./plugins/amorce-crawl-agents",
+      "description": "Agents CGAI Amorce (phase CRAWL) : todo-tracker + crit-prompt-builder en un seul plugin. Outils qui aident l'employé, sans observation.",
       "version": "0.1.0"
     }
   ]

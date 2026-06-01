@@ -1,0 +1,8 @@
+{
+  "name": "amorce-crawl-agents",
+  "description": "Agents CGAI Amorce — phase CRAWL. Outils qui aident l'employé au quotidien : suivi des TODO de projet (todo-tracker) + construction guidée de prompts C-R-I-T (crit-prompt-builder).",
+  "version": "0.1.0",
+  "author": {
+    "name": "Amorce inc."
+  }
+}

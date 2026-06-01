@@ -11,7 +11,7 @@ Marketplace de plugins Claude Code pour les bureaux clients Amorce (observation 
 | `cowork-observer` | Observateur silencieux des sessions Claude Cowork — déclenche la capture d'events pour le MCO du Bureau Amorce. (Connecteur ajouté séparément.) |
 | `todo-tracker` | Suivi des TODO de projet — détecte les signaux de progression et propose des mises à jour (diff + confirmation). |
 | `crit-prompt-builder` | Construction guidée de prompts avec le modèle C-R-I-T (Context, Role, Interview, Task) de Geoff Woods. |
-| `cgai-toolkit` | **Bundle employé** : todo-tracker + crit-prompt-builder en un seul plugin. Les outils qui aident l'employé, sans observation. Idéal pour l'onboarding CGAI (phase 1). |
+| `amorce-crawl-agents` | **Bundle employé (phase CRAWL)** : todo-tracker + crit-prompt-builder en un seul plugin. Les outils qui aident l'employé, sans observation. Idéal pour l'onboarding CGAI (phase 1). |
 
 ## Installation (employé)
 
