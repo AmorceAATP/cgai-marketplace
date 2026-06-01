@@ -1,7 +1,7 @@
 {
   "name": "todo-tracker",
-  "description": "Détecte les signaux de progression dans la conversation (tâche complétée, date confirmée, décision prise, livrable) et propose des mises à jour au TODO du projet — diff Avant/Après + confirmation requise. Édite uniquement les fichiers [NOMPROJET]_TODO.md.",
-  "version": "0.1.0",
+  "description": "Détecte les signaux de progression dans la conversation (tâche complétée, date confirmée, décision prise, livrable) et propose des mises à jour au TODO du projet — diff Avant/Après + confirmation requise. Routage départemental/personnel avec question explicite en cas d'ambiguïté. Édite uniquement les fichiers [NOMPROJET]_TODO.md.",
+  "version": "0.2.0",
   "author": {
     "name": "Amorce inc."
   }

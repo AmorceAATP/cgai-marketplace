@@ -63,6 +63,39 @@ Jamais de suppression silencieuse.
 | Décision prise (ex. « on part avec X, pas Y ») | Mettre à jour les items concernés + noter la décision en sous-tâche |
 | Nouvelle personne mentionnée dans un contexte de tâche | Ajouter comme responsable ou contact clé |
 
+### Routage de la destination — départemental vs personnel
+
+Avant chaque proposition, le skill détermine la destination de l'item :
+
+- **Cas clair — départemental** : l'item est déjà présent dans le TODO
+  départemental, OU concerne explicitement un livrable d'équipe, un collègue
+  nommé, ou un jalon partagé. → proposer directement la destination
+  départementale.
+- **Cas clair — personnel** : l'item est déjà présent dans le TODO personnel,
+  OU est manifestement privé (« pense à moi de… », préparation perso, aucun
+  collègue impliqué). → proposer directement la destination personnelle.
+- **Cas ambigu** (un seul signal, signaux contradictoires, ou item nouveau
+  sans contexte d'équipe clair) : **le skill ne devine pas — il demande.**
+
+Format de la question de routage (cas ambigu uniquement, langue de l'employé) :
+
+```
+📍 Où veux-tu que je classe cet item ?
+  - [ ] [item]
+
+→ 📂 TODO [Département] (PARTAGÉ — visible par toute l'équipe, SharePoint)
+→ 🔒 Ton TODO personnel (PRIVÉ — local, toi seul)
+
+(départemental / personnel)
+```
+
+Une fois la destination connue (cas clair ou réponse à la question), le skill
+enchaîne sur le diff HITL normal ci-dessous, avec la destination tranchée.
+
+**Garde-fou anti-fuite :** un item contenant des données CONFIDENTIAL (paye,
+TSX, données personnelles) ne peut jamais aller au TODO départemental. Le skill
+le redirige vers le personnel et le signale.
+
 ### Règle d'or : toujours proposer, jamais imposer
 
 Aucune écriture sans confirmation explicite. La proposition se fait **à la fin de la réponse**, jamais en interruption.
@@ -86,6 +119,9 @@ Pour toute mise à jour, présenter ce bloc en fin de réponse :
 ```
 📝 Mise à jour TODO — [NomProjet]
 
+DESTINATION : 📂 TODO [Département] (PARTAGÉ — équipe + SharePoint)
+              [ou] 🔒 Ton TODO personnel (PRIVÉ — local, toi seul)
+
 AVANT :
 - [ ] [Tâche originale]
 
@@ -95,10 +131,12 @@ APRÈS :
 PREUVE : « [citation exacte du passage de la conversation qui justifie le changement] »
 NOTION : [URL ou Page ID si une page Notion existe ou a été créée — sinon "Aucune référence" ou "À créer ?"]
 
-Je mets à jour `[Projet]/[NOMPROJET]_TODO.md` ?
+Confirmes-tu — destination et mise à jour ?
+(oui / non / changer de destination / modifier)
 ```
 
 Règles strictes :
+- **Destination toujours tranchée et affichée** : départemental OU personnel, jamais ambigu à l'écriture (voir « Routage de la destination » ci-dessus)
 - **Aucune mise à jour sans preuve textuelle** (citation directe de la conversation)
 - **Aucune mise à jour sans confirmation** explicite (`oui`, `ok`, `vas-y`, `confirme`)
 - Si plusieurs items concernés, énumérer chacun avec son propre bloc AVANT/APRÈS
